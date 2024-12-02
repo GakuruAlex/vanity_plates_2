@@ -30,5 +30,10 @@ class Plates:
         """
         return any(char.isalpha() for char in plate)  and any(char.isdigit() for char in plate)
     def is_int_in_mid(self, plate: str)-> bool:
-        pass
+        for index,char in enumerate(plate):
+            if char.isdigit():
+                new_plate =plate[index:]
+                break
+        return any(char.isalpha() for char in new_plate)
+                
         
