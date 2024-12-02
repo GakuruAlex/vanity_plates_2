@@ -43,6 +43,13 @@ class Plates:
                 new_plate =plate[index:]
                 break
         return any(char.isalpha() for char in new_plate) or int(new_plate[0]) == 0
-    
-                
-        
+    def contains_punctuation(self, plate: str)-> bool:
+        """_Check if plate contains punctuation and spaces_
+
+        Args:
+            plate (str): _Requested plate_
+
+        Returns:
+            bool: _True if no punctuation and spaces else False_
+        """
+        return plate.isalnum()
