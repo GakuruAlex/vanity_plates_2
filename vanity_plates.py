@@ -37,6 +37,11 @@ class Plates:
 
         Returns:
             bool: _True if plate has digit between letters and first digit is not zero else False_
+        Example:
+            >>> is_int_in_mid("AA2AA2")
+            True
+            >>> is_int_in_mid("AAA222")
+            False
         """
         for index,char in enumerate(plate):
             if char.isdigit():
@@ -51,6 +56,11 @@ class Plates:
 
         Returns:
             bool: _True if no punctuation and spaces else False_
+        Example:
+            >>> contains_no_punctuation("AAAAA")
+            True
+            >>> contains_no_punctuation("PI3.14")
+            False
         """
         return plate.isalnum()
     def is_valid(self, plate: str)-> bool:
