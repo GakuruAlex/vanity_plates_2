@@ -65,7 +65,7 @@ class Plates:
         if self.is_length_valid(plate):
             if self.is_plate_alphanum(plate):
                 return not self.is_int_in_mid(plate) and self.starts_with_two_letters(plate) and self.contains_no_punctuation(plate)
-            elif plate.islalpha():
+            elif plate.isalpha():
                 return self.contains_no_punctuation(plate)
             else:
                 return False
