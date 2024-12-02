@@ -112,3 +112,13 @@ class Plates:
                 return False
         else:
             return False
+    def main(self):
+        plate = input("Plate: ")
+        if self.is_valid(plate):
+            print("Valid")
+        else:
+            print("Invalid")
+
+if __name__ == "__main__":
+    plates = Plates()
+    plates.main()
