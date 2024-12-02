@@ -61,6 +61,16 @@ class Plates:
 
         Returns:
             bool: _True if plate is valid else False_
+        
+        Example:
+            >>> is_valid("AAA222")
+            True
+            >>> is_valid("Hello World")
+            False
+            >>> is_valid("AAA020")
+            False
+            >>> is_valid("22222")
+            False
         """
         if self.is_length_valid(plate):
             if self.is_plate_alphanum(plate):
