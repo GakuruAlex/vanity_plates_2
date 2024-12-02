@@ -47,7 +47,11 @@ class TestIsPlateAlphaNumerical:
 @pytest.mark.parametrize("plate, is_valid", [
     ("AAA222", False),
     ("AA22AA", True),
-    ("AA2A22", True)
+    ("AA2A22", True),
+    ("AAA022", True),
+    ("AAA200", False),
+    ("AA02A2", True),
+    ("AA02AA", True)
 ])
 class TestIsIntInMiddle:
     plates = Plates()
