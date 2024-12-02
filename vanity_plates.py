@@ -7,6 +7,13 @@ class Plates:
 
         Returns:
             bool: _True if the length of the plate is greater than one and less than seven_
+        Example:
+            >>> is_valid("AA")
+            True
+            >>> is_valid("A")
+            False
+            >>> is_valid("Hello World")
+            False
         """
         return len(plate) > 1 and len(plate) < 7
     def starts_with_two_letters(self, plate: str)-> bool:
