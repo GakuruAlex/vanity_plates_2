@@ -42,3 +42,14 @@ class TestIsPlateAlphaNumerical:
     plates = Plates()
     def test_is_alphanum(self, plate, is_valid):
         assert self.plates.is_plate_alphanum(plate) == is_valid
+
+#Test for is_int_in_mid
+@pytest.mark.parametrize("plate, is_valid", [
+    ("AAA222", False),
+    ("AA22AA", True),
+    ("AA2A22", True)
+])
+class TestIsIntInMiddle:
+    plates = Plates()
+    def test_is_int_in_middle(self, plate, is_valid):
+        assert self.plates.is_int_in_mid(plate) == is_valid
