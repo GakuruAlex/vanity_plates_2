@@ -53,3 +53,21 @@ class Plates:
             bool: _True if no punctuation and spaces else False_
         """
         return plate.isalnum()
+    def is_valid(self, plate: str)-> bool:
+        """_Check if the plate is valid i.e has valid length, no puctuactions , starts with two letters and no digits in the middle of letters_
+
+        Args:
+            plate (str): _Requested plate_
+
+        Returns:
+            bool: _True if plate is valid else False_
+        """
+        if self.is_length_valid(plate):
+            if self.is_plate_alphanum(plate):
+                return not self.is_int_in_mid(plate) and self.starts_with_two_letters(plate) and self.contains_no_punctuation(plate)
+            elif plate.islalpha():
+                return self.contains_no_punctuation(plate)
+            else:
+                return False
+        else:
+            return False
