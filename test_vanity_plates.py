@@ -57,3 +57,15 @@ class TestIsIntInMiddle:
     plates = Plates()
     def test_is_int_in_middle(self, plate, is_valid):
         assert self.plates.is_int_in_mid(plate) == is_valid
+
+#Test contains_punctuation
+@pytest.mark.parametrize("plate, is_valid", [
+    ("AAA 222", False),
+    ("AAA222", True),
+    ("AAA22@", False),
+    ("AAA.AA", False)
+])
+class TestContainsPunctuation:
+    plates = Plates()
+    def test_contains_no_punctuation(self, plate, is_valid):
+        assert self.plates.contains_no_punctuation(plate) == is_valid
