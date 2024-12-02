@@ -1,5 +1,5 @@
 class Plates:
-    def is_length_valid(self,plate: str)-> bool:
+    def is_length_valid(self, plate: str)-> bool:
         """_Check if the length of the plate is valid_
 
         Args:
@@ -9,12 +9,13 @@ class Plates:
             bool: _True if the length of the plate is greater than one and less than seven_
         """
         return len(plate) > 1 and len(plate) < 7
-    def starts_with_two_letters(plate: str) ->bool:
+    def starts_with_two_letters(self, plate: str) ->bool:
         """_A function to check if the first two characters of the plate are letter_
 
         Args:
-            plate (str): _description_
+            plate (str): _Requested plate_
 
         Returns:
-            bool: _description_
+            bool: _True if first two characters letters else False_
         """
+        return plate[0:2].isalpha()
