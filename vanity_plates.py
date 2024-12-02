@@ -24,6 +24,13 @@ class Plates:
 
         Returns:
             bool: _True if first two characters letters else False_
+        Example:
+            >>> starts_with_two_letters("AAAAA")
+            True
+            >>> starts_with_two_letters("2222")
+            False
+            >>> starts_with_two_letters("2AAAA")
+            False
         """
         return plate[0:2].isalpha()
     def is_plate_alphanum(self, plate: str)->bool:
