@@ -30,10 +30,19 @@ class Plates:
         """
         return any(char.isalpha() for char in plate)  and any(char.isdigit() for char in plate)
     def is_int_in_mid(self, plate: str)-> bool:
+        """_Checks if a digit is in the middle of letters and that the first digit is not a zero_
+
+        Args:
+            plate (str): _Requested plate_
+
+        Returns:
+            bool: _True if plate has digit between letters and first digit is not zero else False_
+        """
         for index,char in enumerate(plate):
             if char.isdigit():
                 new_plate =plate[index:]
                 break
-        return any(char.isalpha() for char in new_plate)
+        return any(char.isalpha() for char in new_plate) or int(new_plate[0]) == 0
+    
                 
         
