@@ -19,7 +19,7 @@ class Plates:
             bool: _True if first two characters letters else False_
         """
         return plate[0:2].isalpha()
-    def is_plate_alphanum(plate: str)->bool:
+    def is_plate_alphanum(self, plate: str)->bool:
         """_Check if a plate contains both letters and numbers_
 
         Args:
@@ -28,7 +28,7 @@ class Plates:
         Returns:
             bool: _True if plate is alpha numerical otherwise False_
         """
-        return any(char.isalpha() for char in plate)  and any(char.isnum() for char in plate)
+        return any(char.isalpha() for char in plate)  and any(char.isdigit() for char in plate)
     def is_int_in_mid(self, plate: str)-> bool:
         pass
         
