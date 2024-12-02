@@ -15,4 +15,17 @@ class TestIsLengthValid:
     plates = Plates()
     def test_is_length_valid(self, plate, is_valid):
         assert self.plates.is_length_valid(plate) == is_valid
+
+
+#Test for starts_with_two_letters function
+
+@pytest.mark.parametrize("plate, is_valid", [
+    ("AAA222", True),
+    ("222AAA", False),
+    ("AA", True),
+])
+class TestStartsWithTwoLetters:
+    plates = Plates()
+    def test_starts_with_two_letters(self, plate, is_valid):
+        assert self.plates.starts_with_two_letters(plate) == is_valid
     
