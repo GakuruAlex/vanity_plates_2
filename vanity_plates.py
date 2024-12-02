@@ -41,6 +41,13 @@ class Plates:
 
         Returns:
             bool: _True if plate is alpha numerical otherwise False_
+            Example:
+            >>> is_alpha_num("AAAA222")
+            True
+            >>> is_alphanum("2222")
+            False
+            >>> is_alphanum("AAAAA")
+            False
         """
         return any(char.isalpha() for char in plate)  and any(char.isdigit() for char in plate)
     def is_int_in_mid(self, plate: str)-> bool:
